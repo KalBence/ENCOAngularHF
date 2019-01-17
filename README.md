@@ -1,3 +1,9 @@
+# HF leírás
+
+Utazások szervezésére szolgáló alkalmazás.
+Listázza a meglévő utakat amik nevei között kereshetünk
+Egyet kiválsztva napokra bontva látható a pontos leíás
+
 # AngularHF
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
