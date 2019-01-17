@@ -1,0 +1,27 @@
+<h1>Trips</h1>
+<h3>Search</h3>
+
+<div>Filter: <input [(ngModel)]="filter"></div>
+
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>From</th>
+        <th>To</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trip of trips | TripFilter:filter">
+        <td>{{ trip.name }}</td>
+        <td>{{ trip.description }}</td>
+        <td>{{ trip.from | date: 'yyyy/MM/dd'}}</td>
+        <td>{{ trip.to | date: 'yyyy/MM/dd'}}</td>
+        <td><a [routerLink]="['/trips', trip.id]">details</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <a routerLink="/">back to the main page</a>

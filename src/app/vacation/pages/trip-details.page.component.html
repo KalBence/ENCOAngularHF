@@ -1,0 +1,25 @@
+<p><strong>Name:</strong> {{ trip.name }}</p>
+<p><strong>From:</strong> {{ trip.from | date: 'yyyy/MM/dd' }}</p>
+<p><strong>To:</strong> {{ trip.to | date: 'yyyy/MM/dd' }}</p>
+<p><strong>Description:</strong> {{ trip.description }}</p>
+
+<table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Accommodation Cost</th>
+        <th>Accommodation Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let day of trip.days">
+        <td>{{ day.date | date: 'yyyy/MM/dd' }}</td>
+        <td>{{ day.description }}</td>
+        <td>{{ day.accommodationCost }}</td>
+        <td>{{ day.accommodationAddress }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<a routerLink="/trips">back to the list</a>
